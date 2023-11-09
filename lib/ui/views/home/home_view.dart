@@ -52,8 +52,9 @@ class HomeView extends StackedView<HomeViewModel> {
                   height: 30,
                 ),
                 ElevatedButton(
-                  //style: ButtonStyle(backgroundColor: Colors.lightGreen),
-                    child: const Text('Go to search Screen', style: TextStyle(color: Colors.black)),
+                    //style: ButtonStyle(backgroundColor: Colors.lightGreen),
+                    child: const Text('Go to search Screen',
+                        style: TextStyle(color: Colors.black)),
                     onPressed: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(

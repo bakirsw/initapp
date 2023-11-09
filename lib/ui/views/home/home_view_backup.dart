@@ -16,9 +16,10 @@ class HomeView extends StackedView<HomeViewModel> {
     Widget? child,
   ) {
     return Scaffold(
-      appBar: AppBar(title: const Center(child:
-        Text("BAKSAL")),backgroundColor: Colors.lightGreen),
-    body: SafeArea(
+      appBar: AppBar(
+          title: const Center(child: Text("BAKSAL")),
+          backgroundColor: Colors.lightGreen),
+      body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 25.0),
           child: Center(
