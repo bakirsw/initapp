@@ -4,7 +4,7 @@ import 'package:stacked/stacked.dart';
 import 'package:initapp/ui/common/app_colors.dart';
 import 'package:initapp/ui/common/ui_helpers.dart';
 
-import 'home_viewmodel.dart';
+import 'home_viewmodel_backup.dart';
 
 class HomeView extends StackedView<HomeViewModel> {
   const HomeView({Key? key}) : super(key: key);

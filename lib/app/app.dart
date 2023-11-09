@@ -7,7 +7,7 @@ import 'package:initapp/ui/views/startup/startup_view.dart';
 import 'package:initapp/ui/views/search/search_view.dart';
 import 'package:stacked/stacked_annotations.dart';
 import 'package:stacked_services/stacked_services.dart';
-import 'package:initapp/services/api_service.dart';
+import 'package:initapp/ui/views/feed/feed_view.dart';
 // @stacked-import
 
 @StackedApp(
@@ -15,7 +15,8 @@ import 'package:initapp/services/api_service.dart';
     MaterialRoute(page: HomeView),
     MaterialRoute(page: StartupView),
     MaterialRoute(page: SearchView),
-    // @stacked-route
+    MaterialRoute(page: FeedView),
+// @stacked-route
   ],
   dependencies: [
     LazySingleton(classType: BottomSheetService),
@@ -23,7 +24,6 @@ import 'package:initapp/services/api_service.dart';
     LazySingleton(classType: NavigationService),
     LazySingleton(classType: ApiService),
     LazySingleton(classType: HttpService),
-    LazySingleton(classType: ApiService),
 // @stacked-service
   ],
   bottomsheets: [
