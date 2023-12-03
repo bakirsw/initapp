@@ -3,7 +3,6 @@ import 'package:flutter/scheduler.dart';
 import 'package:initapp/ui/views/home/home_view.dart';
 import 'package:stacked/stacked.dart';
 import 'package:initapp/ui/common/ui_helpers.dart';
-import 'package:stacked/stacked.dart';
 import 'package:initapp/app/app.locator.dart';
 import 'package:initapp/app/app.router.dart';
 import 'package:stacked_services/stacked_services.dart';
@@ -23,7 +22,7 @@ class StartupView extends StackedView<StartupViewModel> {
     return Scaffold(
       appBar: AppBar(
           title: const Center(child: Text("Welcome!")),
-          backgroundColor: Colors.lightGreen),
+          backgroundColor: Colors.lightGreen[800]),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.only(top: 60.0),
@@ -41,21 +40,32 @@ class StartupView extends StackedView<StartupViewModel> {
                 const SizedBox(
                   height: 30,
                 ),
-                const TextField(
+                TextField(
                   decoration: InputDecoration(
-                      border: OutlineInputBorder(),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(
+                            50.0), // Adjust the radius as needed
+                      ),
                       labelText: 'Email',
                       hintText: 'example@example.com'),
                 ),
-                const TextField(
+                TextField(
                   decoration: InputDecoration(
-                      border: OutlineInputBorder(), labelText: 'Password'),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(
+                          50.0), // Adjust the radius as needed
+                    ),
+                    labelText: 'Password',
+                  ),
                 ),
                 const SizedBox(
                   height: 30,
                 ),
                 ElevatedButton(
-                    //style: ButtonStyle(backgroundColor: Colors.lightGreen),
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all<Color>(
+                          Colors.lightGreen[800]!),
+                    ),
                     child: const Text('Login',
                         style: TextStyle(color: Colors.black)),
                     onPressed: () {

@@ -25,17 +25,18 @@ class HomeView extends StackedView<HomeViewModel> {
         viewModelBuilder: () => HomeViewModel(),
         builder: (context, model, child) => Scaffold(
               body: getViewForIndex(model.currentIndex),
-              backgroundColor: Colors.amber,
+              backgroundColor: Colors.lightGreen,
               bottomNavigationBar: BottomNavigationBar(
-                backgroundColor: Colors.grey[800],
+                selectedItemColor: Colors.deepOrangeAccent,
+                backgroundColor: Colors.grey[700],
                 currentIndex: model.currentIndex,
                 onTap: model.setIndex,
                 type: BottomNavigationBarType.fixed,
                 items: const [
                   BottomNavigationBarItem(
-                      icon: Icon(Icons.art_track), label: "TEST"),
+                      icon: Icon(Icons.art_track), label: "Home"),
                   BottomNavigationBarItem(
-                      icon: Icon(Icons.home), label: "BAKIR"),
+                      icon: Icon(Icons.home), label: "Settings"),
                 ],
               ),
             ));

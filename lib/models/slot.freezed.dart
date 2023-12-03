@@ -66,18 +66,21 @@ class _$SlotsCopyWithImpl<$Res, $Val extends Slots>
 }
 
 /// @nodoc
-abstract class _$$_SlotsCopyWith<$Res> implements $SlotsCopyWith<$Res> {
-  factory _$$_SlotsCopyWith(_$_Slots value, $Res Function(_$_Slots) then) =
-      __$$_SlotsCopyWithImpl<$Res>;
+abstract class _$$SlotsImplCopyWith<$Res> implements $SlotsCopyWith<$Res> {
+  factory _$$SlotsImplCopyWith(
+          _$SlotsImpl value, $Res Function(_$SlotsImpl) then) =
+      __$$SlotsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? name, int? age});
 }
 
 /// @nodoc
-class __$$_SlotsCopyWithImpl<$Res> extends _$SlotsCopyWithImpl<$Res, _$_Slots>
-    implements _$$_SlotsCopyWith<$Res> {
-  __$$_SlotsCopyWithImpl(_$_Slots _value, $Res Function(_$_Slots) _then)
+class __$$SlotsImplCopyWithImpl<$Res>
+    extends _$SlotsCopyWithImpl<$Res, _$SlotsImpl>
+    implements _$$SlotsImplCopyWith<$Res> {
+  __$$SlotsImplCopyWithImpl(
+      _$SlotsImpl _value, $Res Function(_$SlotsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -86,7 +89,7 @@ class __$$_SlotsCopyWithImpl<$Res> extends _$SlotsCopyWithImpl<$Res, _$_Slots>
     Object? name = freezed,
     Object? age = freezed,
   }) {
-    return _then(_$_Slots(
+    return _then(_$SlotsImpl(
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -101,11 +104,11 @@ class __$$_SlotsCopyWithImpl<$Res> extends _$SlotsCopyWithImpl<$Res, _$_Slots>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Slots implements _Slots {
-  _$_Slots({this.name, this.age});
+class _$SlotsImpl implements _Slots {
+  _$SlotsImpl({this.name, this.age});
 
-  factory _$_Slots.fromJson(Map<String, dynamic> json) =>
-      _$$_SlotsFromJson(json);
+  factory _$SlotsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SlotsImplFromJson(json);
 
   @override
   final String? name;
@@ -121,7 +124,7 @@ class _$_Slots implements _Slots {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Slots &&
+            other is _$SlotsImpl &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.age, age) || other.age == age));
   }
@@ -133,21 +136,21 @@ class _$_Slots implements _Slots {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SlotsCopyWith<_$_Slots> get copyWith =>
-      __$$_SlotsCopyWithImpl<_$_Slots>(this, _$identity);
+  _$$SlotsImplCopyWith<_$SlotsImpl> get copyWith =>
+      __$$SlotsImplCopyWithImpl<_$SlotsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SlotsToJson(
+    return _$$SlotsImplToJson(
       this,
     );
   }
 }
 
 abstract class _Slots implements Slots {
-  factory _Slots({final String? name, final int? age}) = _$_Slots;
+  factory _Slots({final String? name, final int? age}) = _$SlotsImpl;
 
-  factory _Slots.fromJson(Map<String, dynamic> json) = _$_Slots.fromJson;
+  factory _Slots.fromJson(Map<String, dynamic> json) = _$SlotsImpl.fromJson;
 
   @override
   String? get name;
@@ -155,6 +158,6 @@ abstract class _Slots implements Slots {
   int? get age;
   @override
   @JsonKey(ignore: true)
-  _$$_SlotsCopyWith<_$_Slots> get copyWith =>
+  _$$SlotsImplCopyWith<_$SlotsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

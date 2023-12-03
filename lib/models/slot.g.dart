@@ -6,12 +6,13 @@ part of 'slot.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Slots _$$_SlotsFromJson(Map<String, dynamic> json) => _$_Slots(
+_$SlotsImpl _$$SlotsImplFromJson(Map<String, dynamic> json) => _$SlotsImpl(
       name: json['name'] as String?,
       age: json['age'] as int?,
     );
 
-Map<String, dynamic> _$$_SlotsToJson(_$_Slots instance) => <String, dynamic>{
+Map<String, dynamic> _$$SlotsImplToJson(_$SlotsImpl instance) =>
+    <String, dynamic>{
       'name': instance.name,
       'age': instance.age,
     };

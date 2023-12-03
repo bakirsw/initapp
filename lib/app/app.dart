@@ -8,6 +8,7 @@ import 'package:initapp/ui/views/search/search_view.dart';
 import 'package:stacked/stacked_annotations.dart';
 import 'package:stacked_services/stacked_services.dart';
 import 'package:initapp/ui/views/feed/feed_view.dart';
+import 'package:initapp/ui/views/barber_profile/barber_profile_view.dart';
 // @stacked-import
 
 @StackedApp(
@@ -16,6 +17,7 @@ import 'package:initapp/ui/views/feed/feed_view.dart';
     MaterialRoute(page: StartupView),
     MaterialRoute(page: SearchView),
     MaterialRoute(page: FeedView),
+    MaterialRoute(page: BarberProfileView),
 // @stacked-route
   ],
   dependencies: [
